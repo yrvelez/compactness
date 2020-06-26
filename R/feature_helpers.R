@@ -414,6 +414,7 @@ harris3 = function(img = "temp.png", window_size = 5, k = 0.01, thresh = 0.9){
 
     # read in image
   image.orig <- imager::load.image(img)
+  image.orig <- rm.alpha(image.orig)
   image <- imager::grayscale(image.orig)
   # take first order calculations
   height = ncol(image)
